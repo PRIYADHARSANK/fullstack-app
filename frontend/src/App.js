@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Toaster } from './components/ui/sonner';
+import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Toaster position="top-center" richColors />
+      <Header />
       <Hero />
       <About />
       <Projects />
