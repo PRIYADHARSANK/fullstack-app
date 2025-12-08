@@ -2,7 +2,7 @@
 
 export const companyInfo = {
   name: "Peacock Promotors",
-  logo: "https://customer-assets.emergentagent.com/job_7a0ea228-5107-401b-8208-1b466ed125a4/artifacts/0sgmwv1e_image.png",
+  logo: "https://customer-assets.emergentagent.com/job_7a0ea228-5107-401b-8208-1b466ed125a4/artifacts/8ft9lrvo_image.png",
   founder: {
     name: "Rtn.PHF.K. Shanmugam",
     degrees: "M.com, MBA, M.Phil",
