@@ -21,18 +21,23 @@ const Hero = () => {
         ease: 'power3.out'
       })
       .to(logoRef.current, {
-        y: -100,
-        scale: 0.4,
-        duration: 0.8,
+        scale: 1.1,
+        duration: 0.3,
         ease: 'power2.inOut',
         delay: 0.5
+      })
+      .to(logoRef.current, {
+        opacity: 0,
+        scale: 0,
+        duration: 0.6,
+        ease: 'power2.in'
       })
       .to(contentRef.current, {
         opacity: 1,
         y: 0,
         duration: 1,
         ease: 'power2.out'
-      }, '-=0.4');
+      }, '-=0.3');
     }
   }, [logoLoaded]);
 
