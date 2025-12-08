@@ -70,11 +70,13 @@ const About = () => {
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37] to-[#FFD700] rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
               <div className="relative bg-gradient-to-br from-[#1a1a1c] to-[#0f0f11] p-2 rounded-2xl">
-                <img 
-                  src={companyInfo.founder.photo} 
-                  alt={companyInfo.founder.name}
-                  className="w-full h-auto rounded-xl object-cover"
-                />
+                <div className="bg-[#1a1a1c] rounded-xl overflow-hidden">
+                  <img 
+                    src={companyInfo.founder.photo} 
+                    alt={companyInfo.founder.name}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
               </div>
             </div>
 
