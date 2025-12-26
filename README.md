@@ -39,8 +39,8 @@ Ensure you have the following installed on your machine:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/PRIYADHARSANK/fullstack-app.git
-cd fullstack-app
+git clone https://github.com/PRIYADHARSANK/peacock-promotors.git
+cd peacock-promotors
 ```
 
 ### 2. Backend Setup
@@ -109,7 +109,7 @@ The application will open at `http://localhost:3000`.
 ## 📂 Project Structure
 
 ```
-fullstack-app/
+peacock-promotors/
 ├── backend/                # Python FastAPI Backend
 │   ├── server.py           # Main application entry point
 │   ├── requirements.txt    # Python dependencies
