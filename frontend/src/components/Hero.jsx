@@ -111,7 +111,7 @@ const Hero = () => {
               href="#contact"
               className="px-8 py-4 border-2 border-[#D4AF37] text-[#D4AF37] font-semibold rounded-full transition-all duration-300 hover:bg-[#D4AF37] hover:text-black hover:scale-105"
             >
-              Book Your Dream Visit !
+              Book Your Appointment
             </a>
           </div>
         </div>
