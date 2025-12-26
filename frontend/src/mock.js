@@ -2,86 +2,50 @@
 
 export const companyInfo = {
   name: "Peacock Promotors",
-  logo: "https://customer-assets.emergentagent.com/job_7a0ea228-5107-401b-8208-1b466ed125a4/artifacts/8ft9lrvo_image.png",
+  logo: "/logo.png",
   founder: {
     name: "Rtn.PHF.K. Shanmugam",
     degrees: "M.com, MBA, M.Phil",
-    photo: "https://customer-assets.emergentagent.com/job_7a0ea228-5107-401b-8208-1b466ed125a4/artifacts/r670prti_image.png"
+    photo: "/founder.png"
   },
   contact: {
-    whatsapp: "+919876543210",
-    email: "info@peacockpromotors.com",
-    address: "123 Real Estate Avenue, Tamil Nadu, India"
+    whatsapp: "+91-9786203009",
+    email: "k.shanmugaa@gmail.com",
+    address: "No.19, Veer Tower, IInd Floor TT Nagar 1st Street, Karaikudi - 630001"
   }
 };
 
 export const properties = [
   {
     id: 1,
-    title: "Luxury Villa in ECR",
-    type: "Residential",
-    price: "₹2.5 Cr",
-    location: "East Coast Road, Chennai",
-    bedrooms: 4,
-    bathrooms: 4,
-    area: "3500 sq.ft",
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
+    title: "Kodaikanal",
+    location: "Hill station in Tamil Nadu",
+    image: "/project1.jpg",
     featured: true
   },
   {
     id: 2,
-    title: "Modern Apartment",
+    title: "Mathagupatti",
     type: "Residential",
     price: "₹85 Lakhs",
-    location: "OMR, Chennai",
+    location: "Sivagangai Road, Tamil Nadu",
     bedrooms: 3,
     bathrooms: 2,
     area: "1800 sq.ft",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
+    image: "/project2.jpg",
     featured: true
   },
   {
     id: 3,
-    title: "Commercial Space",
+    title: "Aravayal",
     type: "Commercial",
     price: "₹1.2 Cr",
-    location: "Anna Nagar, Chennai",
+    location: "Devakottai Road, Tamil Nadu",
     area: "2500 sq.ft",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    image: "/project3.jpg",
     featured: false
   },
-  {
-    id: 4,
-    title: "Premium Plot",
-    type: "Land",
-    price: "₹50 Lakhs",
-    location: "Mahabalipuram",
-    area: "2400 sq.ft",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
-    featured: false
-  },
-  {
-    id: 5,
-    title: "Beachfront Villa",
-    type: "Residential",
-    price: "₹4.5 Cr",
-    location: "Covelong Beach",
-    bedrooms: 5,
-    bathrooms: 5,
-    area: "5000 sq.ft",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
-    featured: true
-  },
-  {
-    id: 6,
-    title: "Corporate Office",
-    type: "Commercial",
-    price: "₹3 Cr",
-    location: "Guindy, Chennai",
-    area: "4000 sq.ft",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
-    featured: false
-  }
+
 ];
 
 export const testimonials = [

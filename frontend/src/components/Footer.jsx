@@ -1,6 +1,6 @@
 import React from 'react';
 import { companyInfo } from '../mock';
-import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,46 +12,21 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-4 mb-6">
-              <img 
-                src={companyInfo.logo} 
+              <img
+                src={companyInfo.logo}
                 alt={companyInfo.name}
                 className="w-16 h-16 object-contain"
               />
               <div>
                 <h3 className="text-2xl font-bold text-[#D4AF37]">{companyInfo.name}</h3>
-                <p className="text-sm text-gray-400">Luxury Living Redefined</p>
+                <p className="text-sm text-gray-400">Trusted Real Estate Partner</p>
               </div>
             </div>
             <p className="text-gray-400 leading-relaxed mb-6">
-              Your trusted partner in premium real estate. We specialize in luxury properties 
+              Your trusted partner in premium real estate. We specialize in luxury properties
               that blend elegance with excellence.
             </p>
-            <div className="flex gap-4">
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-[#1a1a1c] border border-[#2a2a2c] rounded-lg flex items-center justify-center hover:bg-[#D4AF37] hover:border-[#D4AF37] transition-all duration-300 group"
-              >
-                <Facebook className="w-5 h-5 text-gray-400 group-hover:text-black transition-colors duration-300" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-[#1a1a1c] border border-[#2a2a2c] rounded-lg flex items-center justify-center hover:bg-[#D4AF37] hover:border-[#D4AF37] transition-all duration-300 group"
-              >
-                <Instagram className="w-5 h-5 text-gray-400 group-hover:text-black transition-colors duration-300" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-[#1a1a1c] border border-[#2a2a2c] rounded-lg flex items-center justify-center hover:bg-[#D4AF37] hover:border-[#D4AF37] transition-all duration-300 group"
-              >
-                <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-black transition-colors duration-300" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-[#1a1a1c] border border-[#2a2a2c] rounded-lg flex items-center justify-center hover:bg-[#D4AF37] hover:border-[#D4AF37] transition-all duration-300 group"
-              >
-                <Twitter className="w-5 h-5 text-gray-400 group-hover:text-black transition-colors duration-300" />
-              </a>
-            </div>
+
           </div>
 
           {/* Quick Links */}

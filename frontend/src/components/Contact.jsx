@@ -1,21 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { companyInfo } from '../mock';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { toast } from 'sonner';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const sectionRef = useRef(null);
   const formRef = useRef(null);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -36,19 +29,7 @@ const Contact = () => {
     return () => ctx.revert();
   }, []);
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Mock form submission
-    toast.success('Message sent successfully! We will contact you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
-  };
 
   const handleWhatsApp = () => {
     window.open(`https://wa.me/${companyInfo.contact.whatsapp.replace(/[^0-9]/g, '')}`, '_blank');
@@ -78,19 +59,19 @@ const Contact = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-6"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12" ref={formRef}>
+        <div className="max-w-3xl mx-auto">
+          <div ref={formRef}>
             {/* Contact info */}
             <div className="space-y-8">
-              <div>
+              <div className="text-center">
                 <h3 className="text-3xl font-bold mb-6 text-[#D4AF37]">Contact Information</h3>
                 <p className="text-gray-400 leading-relaxed mb-8">
                   Reach out to us through any of the following channels. We're here to help you find your perfect property.
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div 
+              <div className="grid md:grid-cols-2 gap-6">
+                <div
                   onClick={handleWhatsApp}
                   className="group flex items-start gap-4 p-6 bg-gradient-to-br from-[#1a1a1c] to-[#0f0f11] rounded-xl border border-[#2a2a2c] hover:border-[#D4AF37] transition-all duration-300 cursor-pointer hover:scale-105"
                 >
@@ -105,7 +86,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div 
+                <div
                   onClick={handleEmail}
                   className="group flex items-start gap-4 p-6 bg-gradient-to-br from-[#1a1a1c] to-[#0f0f11] rounded-xl border border-[#2a2a2c] hover:border-[#D4AF37] transition-all duration-300 cursor-pointer hover:scale-105"
                 >
@@ -120,7 +101,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="group flex items-start gap-4 p-6 bg-gradient-to-br from-[#1a1a1c] to-[#0f0f11] rounded-xl border border-[#2a2a2c]">
+                <div className="group flex items-start gap-4 p-6 bg-gradient-to-br from-[#1a1a1c] to-[#0f0f11] rounded-xl border border-[#2a2a2c] md:col-span-2">
                   <div className="w-12 h-12 bg-gradient-to-br from-[#D4AF37] to-[#FFD700] rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-black" />
                   </div>
@@ -132,85 +113,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Contact form */}
-            <div className="bg-gradient-to-br from-[#1a1a1c] to-[#0f0f11] p-8 rounded-2xl border border-[#2a2a2c]">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-300 mb-2">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-[#0a0a0b] border border-[#2a2a2c] rounded-lg text-white focus:outline-none focus:border-[#D4AF37] transition-colors duration-300"
-                    placeholder="Enter your name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-300 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-[#0a0a0b] border border-[#2a2a2c] rounded-lg text-white focus:outline-none focus:border-[#D4AF37] transition-colors duration-300"
-                    placeholder="your@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-300 mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-[#0a0a0b] border border-[#2a2a2c] rounded-lg text-white focus:outline-none focus:border-[#D4AF37] transition-colors duration-300"
-                    placeholder="+91 XXXXX XXXXX"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-300 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows="4"
-                    className="w-full px-4 py-3 bg-[#0a0a0b] border border-[#2a2a2c] rounded-lg text-white focus:outline-none focus:border-[#D4AF37] transition-colors duration-300 resize-none"
-                    placeholder="Tell us about your requirements..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full group relative px-6 py-4 bg-gradient-to-r from-[#D4AF37] to-[#FFD700] text-black font-bold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] hover:scale-105"
-                >
-                  <span className="relative z-10 flex items-center justify-center gap-2">
-                    Send Message
-                    <Send className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
-                </button>
-              </form>
             </div>
           </div>
         </div>

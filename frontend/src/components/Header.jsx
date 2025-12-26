@@ -21,28 +21,27 @@ const Header = () => {
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-[#0a0a0b]/95 backdrop-blur-lg border-b border-[#2a2a2c]' 
-          : 'bg-transparent'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || mobileMenuOpen
+        ? 'bg-[#0a0a0b]/95 backdrop-blur-lg border-b border-[#2a2a2c]'
+        : 'bg-transparent'
+        }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div 
+          <div
             className="flex items-center gap-3 cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <img 
-              src={companyInfo.logo} 
+            <img
+              src={companyInfo.logo}
               alt={companyInfo.name}
               className="w-12 h-12 object-contain"
             />
             <div>
               <h1 className="text-xl font-bold text-[#D4AF37]">{companyInfo.name}</h1>
-              <p className="text-xs text-gray-400">Luxury Living Redefined</p>
+              <p className="text-xs text-gray-400">Trusted Real Estate Partner</p>
             </div>
           </div>
 
