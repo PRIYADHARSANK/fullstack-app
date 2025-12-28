@@ -77,7 +77,7 @@ const Hero = () => {
       >
         <img
           ref={imgRef}
-          src={`${process.env.PUBLIC_URL}/Intro-logo.png`}
+          src={`${process.env.PUBLIC_URL}/intro-logo.png`}
           alt={companyInfo.name}
           className="w-48 h-48 object-contain drop-shadow-2xl"
           onLoad={() => setLogoLoaded(true)}
